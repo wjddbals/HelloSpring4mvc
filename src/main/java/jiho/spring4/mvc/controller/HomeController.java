@@ -1,12 +1,15 @@
 package jiho.spring4.mvc.controller;
 
-import javax.xml.ws.RequestWrapper;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
 public class HomeController {
 
-    @RequestMapping(value="/",nmethod=RequsetMethod.GET)
-    public String home(){
+    @RequestMapping(value = "/", method = RequestMethod.GET)
+    public String home() {
+
         return "home";
     }
 
